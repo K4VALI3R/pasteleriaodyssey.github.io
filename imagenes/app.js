@@ -179,6 +179,8 @@ function actualizarTotalCarrito(){
     var carritoContenedor = document.getElementsByClassName('carrito')[0];
     var carritoItems = carritoContenedor.getElementsByClassName('carrito-item');
     var total = 0;
+    var igv = 0;
+    var bruto = 0;
     //recorremos cada elemento del carrito para actualizar el total
     for(var i=0; i< carritoItems.length;i++){
         var item = carritoItems[i];
@@ -188,11 +190,17 @@ function actualizarTotalCarrito(){
         var cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0];
         console.log(precio);
         var cantidad = cantidadItem.value;
-        total = total + (precio * cantidad);
+        bruto = bruto + (precio * cantidad);
+        igv = igv + bruto*0.18;
+        total = bruto + igv;
     }
     total = Math.round(total * 100)/100;
+    igv = Math.round(igv * 100)/100;
+    bruto = Math.round(bruto * 100)/100;
 
-    document.getElementsByClassName('carrito-precio-total')[0].innerText = 'S/.'+total.toLocaleString("es") + ",00";
+    document.getElementsByClassName('carrito-precio-bruto')[0].innerText = 'S/.'+bruto.toLocaleString("es") + ",00";
+    document.getElementsByClassName('carrito-precio-total')[0].innerText = 'S/.'+total.toLocaleString("es") + "0";
+    document.getElementsByClassName('carrito-precio-igv')[0].innerText = 'S/.'+igv.toLocaleString("es") + "0";
 
 }
 
@@ -232,7 +240,21 @@ window.onscroll = function(){
                 tabIndicator.style.left = `calc(calc(100% / 4) * ${i})`;
             });
         }
-      
+      //Movimiento de la galeria 
+const image = document.querySelectorAll('.image');
+
+for (let [i, imageSelect] of image.entries()) {
+    imageSelect.addEventListener('click', function focus() {
+        resetFocus();
+        imageSelect.classList.toggle('active')
+    })
+
+}
+
+function resetFocus() {
+    image.forEach(i => i.classList.remove('active'))
+
+}
           //desplegar menu
     const iconMenu= document.querySelector('#icono-menu');
     menu = document.querySelector('#menu');
@@ -253,5 +275,49 @@ window.onscroll = function(){
         document.body.classList.toggle('opacity');
 
     });
+    //cerrar para cada referencia
+    const  menudat= document.querySelector('.menudat'); 
+    menu = document.querySelector('#menu');
+    menudat.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        document.body.classList.toggle('opacity');
 
-     
+    });
+    const  menudat2= document.querySelector('.menudat2'); 
+    menu = document.querySelector('#menu');
+    menudat2.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        document.body.classList.toggle('opacity');
+
+    });
+    const  menudat3= document.querySelector('.menudat3'); 
+    menu = document.querySelector('#menu');
+    menudat3.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        document.body.classList.toggle('opacity');
+
+    });
+    const  menudat4= document.querySelector('.menudat4'); 
+    menu = document.querySelector('#menu');
+    menudat4.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        document.body.classList.toggle('opacity');
+
+    });
+    const  menudat5= document.querySelector('.menudat5'); 
+    menu = document.querySelector('#menu');
+    menudat5.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        document.body.classList.toggle('opacity');
+
+    });
+    const  menudat6= document.querySelector('.menudat6'); 
+    menu = document.querySelector('#menu');
+    menudat6.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        document.body.classList.toggle('opacity');
+
+    });
+
+    
+  

@@ -340,10 +340,35 @@ section h2{
 .carrito .carrito-item .btn-eliminar i{
     pointer-events: none;
 }
-
+.carrito-bruto{
+    background-color: #f3f3f3;
+    padding: 30px;
+    padding-bottom: 0px;
+}
 .carrito-total{
     background-color: #f3f3f3;
     padding: 30px;
+}
+.carrito-igv{
+    background-color: #f3f3f3;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+.carrito-bruto .fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.carrito-igv .fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 .carrito-total .fila{
     display: flex;
@@ -378,10 +403,11 @@ section h2{
       display: block;
     }
     .contenedor-items{
-        width: 100% !important;
+        width: auto !important;
     }
     .carrito{
-        width: 100%;
+        width: auto;
+        height: auto;
     }
   }
 
@@ -450,13 +476,16 @@ form input::placeholder, textarea::placeholder{
 .btn:hover{
     background-color: #50e04b;
 }
-@media(max-width:350px){
+@media screen and (max-width:350px){
     .formulario{
         padding: 30px;
+        width: 50px;
+        height: auto;
     }
     .formulario form{
         padding: 50px 30px;
-        width: 100%;
+        width: 50px;
+        height: auto;
     }
     .formulario form input{
         padding: 35px;
@@ -658,8 +687,170 @@ form input::placeholder, textarea::placeholder{
  .tabs .tab-body > div.active {
     top: 0px;
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.1);
  }
+
+ :root{
+    --dark: #333;
+    --ligth: #ffff;
+
+}
+
+.galeria .images{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    min-width: 800px;
+    max-width: 900px;
+    width: calc(100%-100);
+    height: 400px;
+    
+    
+}
+.galeria{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.galeria .images .image{
+    position: relative;
+    overflow:  hidden;
+    min-width: 60px;
+    margin: 10px;
+    background-size: auto 100%;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.1,0.1,0.1,0.1);
+}
+
+.galeria .images .image.active {
+    flex-grow: 10000;
+    transform: scale(1);
+    max-width: 600px;
+    margin: 0;
+    border-radius: 25px;
+    background-size: auto 100%;
+
+
+}
+
+.galeria .images .image.active .label{
+    background: var(--dark);
+    padding: 10px;
+    border-radius: 50px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+
+} 
+
+.galeria .images .image:not(.active){
+    flex-grow: 1;
+    border-radius: 25px;
+
+}
+.galeria .images .image:not(.active) .label{
+    bottom: 10px;
+    left: 10px;
+}
+
+.galeria .images .image:not(.active) .label .info{
+    display: none;
+}
+
+.galeria .images .image .label{
+    display: flex;
+    position: absolute;
+}
+
+.galeria .images .image .label .icon {
+    font-size:  1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--ligth);
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color:var(--dark);
+}
+.galeria .images .image .label .info{
+    display:flex;
+    flex-direction:  column;
+    margin-left: 10px;
+    color: var(--ligth);
+
+
+}
+.galeria .images .image .label .info .main{
+    font-weight: bold;
+    
+}
+
+#btn-mas{
+    display: none;
+}
+.redescontainer{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+.redes a, .icon-mas{
+    display: block;
+    text-decoration: none;
+    background: #fac721;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0, 0, 0.4);
+    transition: all 500ms ease;
+    
+}
+.redes a:hover{
+    background: #fff;
+    color: #fac721;
+}
+.redes a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+
+}
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+.icon-mas{
+    cursor: pointer;
+    background: #f7cb3b;
+    font-size: 15px;
+
+}
+
+#btn-mas:checked~ .btn-mas .icon-mas{
+    transform: rotate(137deg);
+    font-size: 19px;
+}
+
+@media screen and (max-width: 718px){
+    .galeria .images{
+        min-width: 520px;
+
+    }
+
+    .galeria .images .image:nth-child(5){
+        display: none;
+    }
+
+}
  @media screen and (max-width: 850px) {
     .informacion{
         display: block;
@@ -804,13 +995,68 @@ box-shadow: 0 0 20px rgb(0, 0, 0.2);
     border-radius: 5px;
 }
 
-#cupcake {
-    height: 110px;
-    width: 110px;    
-    left: 40%;
-    top: 89%;
-    position: absolute;
-}
 .menudat a{
     color: white;
+}
+.menudat2 a{
+    color: white;
+}
+.menudat3 a{
+    color: white;
+}
+.menudat4 a{
+    color: white;
+}
+.menudat5 a{
+    color: white;
+}
+.menudat6 a{
+    color: white;
+}
+
+@media screen and (max-width: 850px) {
+    
+    .ubi {
+      width: 400px;
+      height: 500px;
+    }
+}
+@media screen and (max-width: 850px) {
+    
+    .cont-menu {
+      width: auto;
+      height: auto;
+    }
+    .cont-menu marquee {
+        width: auto;
+        height: auto;
+      }
+    .cont-menu .enlace {
+        width: auto;
+        height: auto;
+      }
+    .horarios {
+        width: auto;
+        height: auto;
+      }
+    .cont-menu ul li {
+        width: auto;
+        height: auto;
+      }
+    .cont-menu ul {
+        width: auto;
+        height: auto;
+      }
+    .icono-menu img {
+        width: 50px;
+        height: 50px;
+      }
+    .icono-menu {
+        width: auto;
+        height: auto;
+      }
+      .horarios{
+        width: auto;
+        height: auto;
+      }
 }
