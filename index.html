@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería Odyssey</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="app.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=PT+Sans&family=Raleway&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="https://static.thenounproject.com/png/2661225-84.png">
+    <link rel="stylesheet " href="css/fontello.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Pasteleria Odyssey</a></div>
+            <ul class="links">
+                <li><a href="#informacion">Informacion</a></li>
+                <li><a href="#producttitle">Nuestros Productos</a></li>
+                <li><a href="#pedidos">Realizar Pedido</a></li>
+                <li><a href="#personalizadas">Tortas Personalizadas</a></li>
+                <li><a href="#referencias">Referencias</a></li>
+                <li><a href="#direccion">Direccion</a></li>
+            </ul>
+            <a href="login.html" class="action_btn" target="_blank">Login</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li class="dpinfo"><a href="#informacion">Información</a></li>
+            <li class="dpinfo"><a href="#producttitle">Nuestros Productos</a></li>
+            <li class="dpinfo"><a href="#pedidos">Realizar Pedido</a></li>
+            <li class="dpinfo"><a href="#personalizadas">Tortas personalizadas</a></li>
+            <li class="dpinfo"><a href="#referencias">Referencias</a></li>
+            <li class="dpinfo"><a href="#direccion">Direccion</a></li>
+            <li><a href="login.html" class="action_btn" target="_blank">Login</a></li>
+        </div>
+    </header>
+    <div class="redescontainer">
+        <input type="checkbox" id="btn-mas">
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=61551552704222&is_tour_dismissed=true" target="_blank"
+                class="icon-facebook"></a>
+        </div>
+        <div class="redes">
+            <a href="https://twitter.com/O57212Odyssey" target="_blank" class="icon-twitter"></a>
+        </div>
+        <div class="redes">
+            <a href="https://www.instagram.com/pasteleriaodyssey/" target="_blank" class="icon-instagram"></a>
+        </div>
+        <div class="redes">
+            <a href="http://wa.me/912481693" target="_blank" class="icon-youtube-play"></a>
+        </div>
+        <div class="redes">
+            <a href="https://www.youtube.com/channel/UCGuwqOAaN5kvfnPNOvbI6Rw" target="_blank"
+                class="icon-whatsapp"></a>
+        </div>
+        <div class="btn-mas">
+            <label for="btn-mas" class="icon-mas"></label>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-btn">&times;</span>
+            <h2>Bienvenido a la Pasteleria Odyssey</h2>
+            <p>¡Deléitate con nuestros deliciosos pasteles y postres! Descubre un mundo de sabores dulces.</p>
+        </div>
+    </div>
+
+    <section id="informacion" class="informacion">
+
+        <h2>Información de la Tienda</h2>
+
+        <div class="tabs">
+            <div class="tab-header">
+                <div class="active">
+                    Nuestra Historia
+                </div>
+                <div>
+                    Misión
+                </div>
+                <div>
+                    Visión
+                </div>
+                <div>
+                    Servicios
+                </div>
+            </div>
+            <div class="tab-indicator"></div>
+            <div class="tab-body">
+                <div class="active">
+                    <h2>Nuestra historia...</h2>
+                    <p>
+                        Comenzó hace años con la pasión por la repostería. En Odyssey, nos dedicamos a crear momentos
+                        especiales a través de nuestros dulces.
+                    </p>
+                </div>
+                <div>
+                    <h2>Nuestra misión...</h2>
+                    <p>
+                        Es endulzar las vidas de las personas. Compartiendo momentos especiales junto a un delicioso
+                        postre.
+                    </p>
+                </div>
+                <div>
+                    <h2>Nuestra visión...</h2>
+                    <p>
+                        Es ser la pasteleria de preferencia de todos en cada celebración y momento especial.
+                    </p>
+                </div>
+                <div>
+                    <h2>Algunos servicios que brindamos</h2>
+                    <p>
+                        <li>Tartas personalizadas para eventos especializados</li>
+                        <li>Pasteles y postres frescos todos los días.</li>
+                        <li>Catering para fiestas y eventos.</li>
+                        <li>Clases de repostería para los amantes de la cocina.</li>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="producttitle" id="producttitle">
+        <h2>Nuestros productos</h2>
+    </section>
+    <section class="galeria">
+
+        <section class="images">
+
+            <div class="image active" style="background-image: url(galeria/1.jpg);">
+                <div class="label">
+                    <div class="icon">
+                        <i class="bi bi-cake"></i>
+                    </div>
+                    <div class="info">
+                        <p class="main">
+                            Tarta de fresa
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="image" style="background-image: url(galeria/2.jpg);">
+                <div class="label">
+                    <div class="icon">
+                        <i class="bi bi-cake"></i>
+                    </div>
+                    <div class="info">
+                        <p class="main">
+                            Brownie de Chocolate
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="image" style="background-image: url(galeria/3.jpg);">
+                <div class="label">
+                    <div class="icon">
+                        <i class="bi bi-cake"></i>
+                    </div>
+                    <div class="info">
+                        <p class="main">
+                            Cheesecake de frutos rojos
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="image" style="background-image: url(galeria/4.jpg);">
+                <div class="label">
+                    <div class="icon">
+                        <i class="bi bi-cake"></i>
+                    </div>
+                    <div class="info">
+                        <p class="main">
+                            Cupcakes
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="image" style="background-image: url(galeria/5.jpg);">
+                <div class="label">
+                    <div class="icon">
+                        <i class="bi bi-cake"></i>
+                    </div>
+                    <div class="info">
+                        <p class="main">
+                            Alfajores
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="image" style="background-image: url(galeria/6.jpg);">
+                <div class="label">
+                    <div class="icon">
+                        <i class="bi bi-cake"></i>
+                    </div>
+                    <div class="info">
+                        <p class="main">
+                            Pie de manzana
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="pedidos" class="pedidos">
+        <h2>Realizar Pedido</h2>
+        <p>Selecciona el producto y la cantidad que deseas.</p>
+    </section>
+
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item1">
+                <span class="titulo-item">Tarta de Fresa</span><br>
+                <img src="https://img.freepik.com/foto-gratis/tarta-fresas-crema-batida-decorada-hojas-menta_2829-19978.jpg?w=996&t=st=1693036690~exp=1693037290~hmac=6bdc7413fd501966de53cef5c14011fd1ea639d2ad879162e7aa87d9273175d7"
+                    alt="" class="img-item" style="border-radius: 50%;">
+                <br>
+                <span class="precio-item">S/.40,00</span>
+                <br>
+                <p class="stock">Stock: <span id="stock-1">15</span> unidades</p>
+                <br>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item1">
+                <span class="titulo-item">Brownie de chocolate</span><br>
+                <img src="https://e0.pxfuel.com/wallpapers/825/542/desktop-wallpaper-brownies.jpg" alt=""
+                    class="img-item" style="border-radius: 50%;">
+                <br>
+                <span class="precio-item">S/.20,00</span>
+                <br>
+                <p class="stock">Stock: <span id="stock-2">15</span> unidades</p>
+                <br>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item1">
+                <span class="titulo-item">Pie de manzana</span><br>
+                <img src="https://us.123rf.com/450wm/nateemee/nateemee2305/nateemee230517807/205428224-homemade-apple-pie-on-wooden-background-generative-ai.jpg?ver=6"
+                    alt="" class="img-item" style="border-radius: 50%;">
+                <br>
+                <span class="precio-item">S/.40,00</span>
+                <br>
+                <p class="stock">Stock: <span id="stock-3">15</span> unidades</p>
+                <br>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item1">
+                <span class="titulo-item">Cheesecake de frutos rojos</span><br>
+                <img src="https://img.freepik.com/fotos-premium/tarta-frutas-capa-delicada-nata-blanca-frutos-rojos-negros_124507-23396.jpg"
+                    alt="" class="img-item" style="border-radius: 50%;">
+                <br>
+                <span class="precio-item">S/.45,00</span>
+                <br>
+                <p class="stock">Stock: <span id="stock-4">15</span> unidades</p>
+                <br>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item1">
+                <span class="titulo-item">Alfajores</span><br>
+                <img src="https://www.halalflash.com/wp-content/uploads/2019/03/alfajores.jpg" alt="" class="img-item"
+                    style="border-radius: 50%;">
+                <br>
+                <span class="precio-item">S/.15,00</span>
+                <br>
+                <p class="stock">Stock: <span id="stock-5">15</span> unidades</p>
+                <br>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item1">
+                <span class="titulo-item">Cupcakes</span><br>
+                <img src="https://img.freepik.com/fotos-premium/cupcakes-fresa-fresa-encima_865967-95327.jpg" alt=""
+                    class="img-item" style="border-radius: 50%;">
+                <br>
+                <span class="precio-item">S/.25,00</span>
+                <br>
+                <p class="stock">Stock: <span id="stock-6">15</span> unidades</p>
+                <br>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+            </div>
+
+            <div class="carrito-bruto">
+                <div class="fila">
+                    <strong>Precio Bruto</strong>
+                    <span class="carrito-precio-bruto">
+                        S/.12.000,00
+                    </span>
+                </div>
+            </div>
+
+            <div class="carrito-igv">
+                <div class="fila">
+                    <strong>IGV</strong>
+                    <span class="carrito-precio-igv">
+                        S/.12.000,00
+                    </span>
+                </div>
+            </div>
+
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        S/.120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="personalizadas" class="personalizadas">
+        <h2>Tortas Personalizadas</h2>
+        <br>
+        <p>¡Estamos aquí para satisfacer tus gustos y decoraciones especiales! Contáctanos para hacer tus pedidos
+            y decoraciones de acuerdo a la tematica que desee. Precisas para cumpleaños tematicos.</p>
+        <br><br>
+    </section>
+    <section id="formulario" class="formulario">
+        <form action="https://formspree.io/f/moqowkol" method="POST">
+            <h2>Contacto</h2>
+            <div class="input-group">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Nombre">
+                <label for="phone">Telefono</label>
+                <input type="tel" name="phone" id="phone" placeholder="Telefono">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <label for="message">Mensaje</label>
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea><br>
+                <input class="btn" type="submit" value="Enviar">
+            </div>
+        </form>
+    </section>
+    <section id="referencias" class="referencias">
+        <h2>Referencias</h2>
+        <br>
+        <p>¡He aqui algunos ejemplos de nuestros trabajos más recientes! Tome de referencia
+            estos ultimos pedidos de nuestros clientes para darse una idea de la tematica que desee para su celebración
+            especial.</p>
+        <br><br>
+    </section>
+    <section id="ejemplos" class="ejemplos">
+        <div class="card">
+            <img src="https://i.pinimg.com/564x/d9/8a/eb/d98aeb2733812f9b2701d5204640e5d6.jpg" class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Futbol</h1>
+                <p class="card-sub-title">Temática de deportes</p>
+                <p class="card-info">Realizamos una decoración especial para el cumpleaños de un pequeño niño de 10
+                    años. Su madre nos pidió un pastel de su deporte favorito. </p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/a0/4e/40/a04e40677c05c4c6eeea49152ad2ed52.jpg" class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Among Us</h1>
+                <p class="card-sub-title">Temática de videojuegos</p>
+                <p class="card-info">Realizamos una decoración especial para el cumpleaños de un pequeño niño de 12
+                    años. Su madre nos pidió un pastel de su videojuego favorito. </p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/564x/a0/fa/f4/a0faf418d72602a9991e1db9b6668993.jpg" class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Rosas</h1>
+                <p class="card-sub-title">Temática de Graduación</p>
+                <p class="card-info">Realizamos una decoración especial para la graduación de una linda adolescente.
+                    Para celebrar el emotivo momento, nos pidieron un pastel memorativo. </p>
+
+            </div>
+            <br>
+    </section>
+    <section id="ejemplos" class="ejemplos">
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/fotos-premium/pastel-limon-adornado-limon-lima-frutos-rojos-frescos-postre-personalizado-tu-cumpleanos_166262-1221.jpg?w=360"
+                class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Citricos</h1>
+                <p class="card-sub-title">Temática de comida</p>
+                <p class="card-info">Realizamos una decoración especial para conmemorar el éxito de un chef. Fue gracias
+                    a estos productos que se destaco del resto y pudo ganar un premio en una competencia culinaria.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/originals/b4/d4/1b/b4d41bbb9b0869601eea04dd0d0907f4.jpg" class="card-img"
+                alt="">
+            <div class="card-body">
+                <h1 class="card-title">Girasol</h1>
+                <p class="card-sub-title">Tematica de bodas</p>
+                <p class="card-info">Realizamos una decoración especial para la boda de una de nuestras clientas
+                    frecuentes. El girasol fue una flor especial para la pareja, por ello quisieron plasmarla en su
+                    pastel. </p>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="go-top-container">
+        <div class="go-top-button">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+
+    <section id="direccion" class="direccion">
+        <div>
+            <h1>Encuentranos</h1>
+            <br>
+            <p>En nuestra sucursal principal, que esperas ven ya y compra tu pastel favorito!!!</p>
+        </div>
+        <iframe class="ubi"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.445750236283!2d-77.1078164241043!3d-12.081607042552227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cb2b3de0dc71%3A0xf2b2f37e279cc1!2sDulce%20Osad%C3%ADa%20-%20San%20Miguel!5e0!3m2!1ses-419!2spe!4v1695523875621!5m2!1ses-419!2spe"
+            width="1500" height="460" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer>
+        <h2>Contacto</h2><br>
+        <p>¡Estamos aquí para satisfacer tus antojos de dulces! Contáctanos para hacer tus pedidos.</p><br>
+        <ul class="contact-details">
+            <li><strong>Dirección:</strong> Calle Dulce 123, Ciudad de los Sabores</li>
+            <li><strong>Teléfono:</strong> 902 - 256 - 664</li>
+            <li><strong>Email:</strong> info@Odyssey.com</li>
+        </ul>
+
+        <p>&copy; 2023 Pastelería Odyssey | Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>
